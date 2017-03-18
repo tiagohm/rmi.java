@@ -1,3 +1,5 @@
+import java.rmi.RemoteException;
+
 import br.tiagohm.rmi.Server;
 
 public class ServerTest
@@ -8,8 +10,7 @@ public class ServerTest
         try
         {
             Calculator calc = new Calculator();
-            Server server = new Server(calc, "192.168.0.3", "Calc");
-            Thread.currentThread().join();
+            Server server = new Server(calc, "25.30.22.6", "Calc");
         }
         catch(IllegalAccessException e)
         {
@@ -19,7 +20,7 @@ public class ServerTest
         {
             e.printStackTrace();
         }
-        catch(InterruptedException e)
+        catch(RemoteException e)
         {
             e.printStackTrace();
         }
