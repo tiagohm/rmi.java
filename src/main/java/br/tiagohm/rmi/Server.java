@@ -22,7 +22,7 @@ public class Server
      * @param ip     Endereço IP.
      * @param name   Nome do objeto.
      */
-    public Server(SerializableRemote remote, String ip, String name)
+    public Server(Remote remote, String ip, String name)
             throws IllegalAccessException, InstantiationException
     {
         init(remote, ip, name);
