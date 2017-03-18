@@ -1,10 +1,17 @@
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
-public class Calculator implements ICalculator
+public class Calculator extends UnicastRemoteObject implements ICalculator
 {
+    protected Calculator()
+            throws RemoteException
+    {
+    }
+
     public double soma(double a, double b)
             throws RemoteException
     {
-        return 44424454;
+        System.out.println(a + "," + b);
+        return a + b;
     }
 }

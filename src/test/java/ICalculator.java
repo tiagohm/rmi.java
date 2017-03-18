@@ -1,8 +1,7 @@
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-import br.tiagohm.rmi.SerializableRemote;
-
-public interface ICalculator extends SerializableRemote
+public interface ICalculator extends Remote
 {
     double soma(double a, double b)
             throws RemoteException;
