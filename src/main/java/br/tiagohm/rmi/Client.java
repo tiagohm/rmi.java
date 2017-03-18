@@ -3,6 +3,7 @@ package br.tiagohm.rmi;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 /**
@@ -12,7 +13,7 @@ import java.rmi.RemoteException;
  * @param <T> Tipo do objeto a ser acessado.
  * @author Tiago Henrique de Melo.
  */
-public class Client<T extends SerializableRemote>
+public class Client<T extends Remote>
 {
     private static final int PORT = 1098;
     private final T remote;
