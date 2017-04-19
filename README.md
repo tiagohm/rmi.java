@@ -14,7 +14,7 @@ O Server executa o método localmente e retorna para o Cliente um resultado caso
 ```java
 public interface ICalculator extends java.rmi.Remote {
 
-  double soma(double a, double b);
+  double soma(double a, double b) throws RemoteException;
 
   //...outros métodos.
 }
@@ -25,7 +25,7 @@ public interface ICalculator extends java.rmi.Remote {
 ```java
 public class Calculator extends java.rmi.server.UnicastRemoteObject implements ICalculator {
 
-  public void soma(double a, double b) {
+  public void soma(double a, double b)  throws RemoteException {
     return a + b;
   }
 }
